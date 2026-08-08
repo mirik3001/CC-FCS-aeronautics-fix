@@ -13,6 +13,8 @@ Required Mods:
 
 NOTICE for original author(xyzKnight):
 
+I Used mod: Neo Peripherals instead of Some Peripherals
+
 # Summary of Changes Between Original and Updated Scripts
 
 ## Changes in `main.lua` (compared to `main_orig.lua`)

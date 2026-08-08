@@ -70,7 +70,7 @@ function update_cannon_data()
     while true do
         local data = reader.getBlockData() -- 1 tick yield
         cannon_pitch = u.wrap_angle_deg(data.CannonPitch)
-        cannon_yaw   = u.wrap_angle_deg(data.CannonYaw) + 360
+        cannon_yaw   = u.wrap_angle_deg(data.CannonYaw)
     end
 end
 

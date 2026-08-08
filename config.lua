@@ -69,16 +69,16 @@ c.solver.sys = {
 -- peripheral config
 c.peripheral = {
     RSC_TYPE          = "Create_RotationSpeedController",
-    BLOCK_READER_TYPE = "blockReader",
-    RADAR_TYPE        = "sp_radar",
+    BLOCK_READER_TYPE = "block_reader",
+    RADAR_TYPE        = "neo_radar",
 
-    PITCH_RSC_INDEX = 2,
-    YAW_RSC_INDEX   = 1,
+    PITCH_RSC_INDEX = 1,
+    YAW_RSC_INDEX   = 2,
 
     PITCH_RSC_SIGN  = -1,
     YAW_RSC_SIGN    = 1,
 
-    RADAR_SCAN_RANGE = 10000
+    RADAR_SCAN_RANGE = 1000
 }
 
 -- controller pipeline

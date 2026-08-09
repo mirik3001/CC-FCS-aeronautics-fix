@@ -16,7 +16,7 @@ c.solver.cannon = {
 -- solver projectile config rotary
 c.solver.projectile = {
     muzzle_speed         = 9,
-    gravity              = 0.025,
+    gravity              = 0.05,
     drag_multiplier      = 0.99,
     proximity_detonation = 0
 }

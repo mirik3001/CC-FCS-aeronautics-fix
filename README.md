@@ -1,7 +1,8 @@
 # CC:FCS aero fix
 - Work in progress!
 - CC:Tweaked Advanced fire control system for the Create: Big Cannons Minecraft mod.
-- schematic is there also
+- Schematic is there also
+- Aircraft(predicting) mode is still in progress
 
 Required Mods:
 - CC:Tweaked

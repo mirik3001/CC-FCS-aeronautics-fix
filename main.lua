@@ -75,6 +75,7 @@ function update_cannon_data()
 end
 
 -- Упрощенная функция для фильтрации sub-levels и выбора цели
+-- function for filtering sub-levels and selecting a target.
 function update_target_data()
     local target_id = c.peripheral.TARGET_ID
     local cannon_pos = c.solver.cannon.pos
@@ -89,6 +90,7 @@ function update_target_data()
             os.sleep(0.05)
         else
             -- Группируем по ID
+            -- Group by ID
             local ships = {}
             for _, v in pairs(scans) do
                 local ship_id = v.id
@@ -100,12 +102,14 @@ function update_target_data()
                     }
                 end
                 -- Используем поля x, y, z (как в системе обнаружения)
+                -- uses x y z fields
                 ships[ship_id].pos = ships[ship_id].pos + vec3.new(v.x or 0, v.y or 0, v.z or 0)
                 ships[ship_id].velo = ships[ship_id].velo + vec3.new(v.velX or 0, v.velY or 0, v.velZ or 0)
                 ships[ship_id].count = ships[ship_id].count + 1
             end
             
             -- Ищем ближайший корабль
+            -- Searching for the nearest ship
             local nearest_dist = math.huge
             local nearest_ship = nil
             
@@ -209,6 +213,7 @@ function main()
         print("intercept:", solver.intercept.target_pos)
         
         -- Проверяем, есть ли цель
+        -- Check if there is a target
         if target_data.pos and target_data.pos:length() > 0.1 then
             local mid_pitch, mid_yaw = reconstruct_mid_state(cannon_pitch, cannon_yaw)
             update_req_history()
@@ -218,6 +223,7 @@ function main()
         else
             print("No target detected")
             -- Останавливаем вращение, если цели нет
+            -- Stop rotation if there is no target
             rsc_pitch = 0
             rsc_yaw = 0
         end
